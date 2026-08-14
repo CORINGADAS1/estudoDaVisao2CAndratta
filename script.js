@@ -20,7 +20,24 @@ document.body.classList.toogle("alto-contraste");
 const ativo = document.body.classList.contains("alto contraste");
 btnContraste.setAttrbute("aria-pressed", ativo);
 
-)
+)}
 
+//função aumentar o texto
 
-}
+btnAumentar.addEventListener("click", ()=>{
+    if (tamanhoAtualfonte < 150){
+        tamanhoAtualfonte += 10;
+        document.documentElement.style.fontSize = `${tamanhoAtualfonte}%`
+    }
+});
+
+//função diminuir texto;
+
+btnDiminuir.addEventListener("click", ()=>{
+    if(tamanhoAtualfonte > 90){
+        tamanhoAtualfonte .= 10;
+    }
+        document.documentElement.style.fontSize = `${tamanhoAtualfonte}%`
+    }
+
+})
