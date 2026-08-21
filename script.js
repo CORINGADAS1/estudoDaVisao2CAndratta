@@ -8,10 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let tamanhoAtualfonte = 100;
     let altoContrasteAtivo = false;
 
-    // Função Alto Contraste (Aplica cores direto no documento)
+    //função alto contraste
     if (btnContraste) {
         btnContraste.addEventListener("click", () => {
             altoContrasteAtivo = !altoContrasteAtivo;
+            document.body.classList.toggle("alto-contraste");
 
             if (altoContrasteAtivo) {
                 document.body.style.backgroundColor = "#000000";
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Função Aumentar Texto (Altera o zoom/tamanho da fonte do body)
+    //função aumentar o texto
     if (btnAumentar) {
         btnAumentar.addEventListener("click", () => {
             if (tamanhoAtualfonte < 150) {
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Função Diminuir Texto
+    //função diminuir texto
     if (btnDiminuir) {
         btnDiminuir.addEventListener("click", () => {
             if (tamanhoAtualfonte > 90) {
