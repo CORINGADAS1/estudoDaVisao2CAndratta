@@ -6,40 +6,43 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnDiminuir = document.getElementById("btn-diminuir-texto");
 
     let tamanhoAtualfonte = 100;
+    let altoContrasteAtivo = false;
 
-    // PEGADINHA 1: Alto Contraste sem depender do CSS externo
-    // Se o CSS não tiver a classe .alto-contraste, alteramos o estilo direto no elemento para A TELA MUDAR DE VERDADE
-    btnContraste.addEventListener("click", () => {
-        document.body.classList.toggle("alto-contraste");
+    // Função Alto Contraste (Aplica cores direto no documento)
+    if (btnContraste) {
+        btnContraste.addEventListener("click", () => {
+            altoContrasteAtivo = !altoContrasteAtivo;
 
-        const ativo = document.body.classList.contains("alto-contraste");
-        btnContraste.setAttribute("aria-pressed", ativo);
+            if (altoContrasteAtivo) {
+                document.body.style.backgroundColor = "#000000";
+                document.body.style.color = "#FFFF00";
+            } else {
+                document.body.style.backgroundColor = "";
+                document.body.style.color = "";
+            }
 
-        if (ativo) {
-            document.body.style.backgroundColor = "#000000";
-            document.body.style.color = "#FFFF00";
-        } else {
-            document.body.style.backgroundColor = "";
-            document.body.style.color = "";
-        }
-    });
+            btnContraste.setAttribute("aria-pressed", altoContrasteAtivo);
+        });
+    }
 
-    // PEGADINHA 2: Alterar o tamanho da fonte diretamente no body/elementos
-    // Se no HTML os textos estiverem em pixels (px), alterar o 'fontSize' do 'documentElement' não faz efeito visual.
-    // Usar 'fontSize' direto no body força a mudança visível.
-    btnAumentar.addEventListener("click", () => {
-        if (tamanhoAtualfonte < 150) {
-            tamanhoAtualfonte += 10;
-            document.body.style.fontSize = `${tamanhoAtualfonte}%`;
-        }
-    });
+    // Função Aumentar Texto (Altera o zoom/tamanho da fonte do body)
+    if (btnAumentar) {
+        btnAumentar.addEventListener("click", () => {
+            if (tamanhoAtualfonte < 150) {
+                tamanhoAtualfonte += 10;
+                document.body.style.fontSize = `${tamanhoAtualfonte}%`;
+            }
+        });
+    }
 
-    // PEGADINHA 3: Operador invalido e escopo da função
-    btnDiminuir.addEventListener("click", () => {
-        if (tamanhoAtualfonte > 90) {
-            tamanhoAtualfonte -= 10; // No seu código estava .= 10
-            document.body.style.fontSize = `${tamanhoAtualfonte}%`; // Estava fora do IF no seu código original
-        }
-    });
+    // Função Diminuir Texto
+    if (btnDiminuir) {
+        btnDiminuir.addEventListener("click", () => {
+            if (tamanhoAtualfonte > 90) {
+                tamanhoAtualfonte -= 10;
+                document.body.style.fontSize = `${tamanhoAtualfonte}%`;
+            }
+        });
+    }
 
 });
