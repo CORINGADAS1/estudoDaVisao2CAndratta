@@ -1,49 +1,35 @@
-//botões de acessibilidade
 document.addEventListener("DOMContentLoaded", () => {
-    
+    // Seleciona os botões pelos IDs do HTML
     const btnContraste = document.getElementById("btn-contraste");
     const btnAumentar = document.getElementById("btn-aumentar-texto");
     const btnDiminuir = document.getElementById("btn-diminuir-texto");
 
-    let tamanhoAtualfonte = 100;
-    let altoContrasteAtivo = false;
+    let tamanhoFonte = 100;
 
-    //função alto contraste
+    // 1. Função para Mudar a Cor (Alto Contraste)
     if (btnContraste) {
         btnContraste.addEventListener("click", () => {
-            altoContrasteAtivo = !altoContrasteAtivo;
             document.body.classList.toggle("alto-contraste");
-
-            if (altoContrasteAtivo) {
-                document.body.style.backgroundColor = "#000000";
-                document.body.style.color = "#FFFF00";
-            } else {
-                document.body.style.backgroundColor = "";
-                document.body.style.color = "";
-            }
-
-            btnContraste.setAttribute("aria-pressed", altoContrasteAtivo);
         });
     }
 
-    //função aumentar o texto
+    // 2. Função para Aumentar o Texto
     if (btnAumentar) {
         btnAumentar.addEventListener("click", () => {
-            if (tamanhoAtualfonte < 150) {
-                tamanhoAtualfonte += 10;
-                document.body.style.fontSize = `${tamanhoAtualfonte}%`;
+            if (tamanhoFonte < 150) {
+                tamanhoFonte += 10;
+                document.body.style.fontSize = `${tamanhoFonte}%`;
             }
         });
     }
 
-    //função diminuir texto
+    // 3. Função para Diminuir o Texto
     if (btnDiminuir) {
         btnDiminuir.addEventListener("click", () => {
-            if (tamanhoAtualfonte > 90) {
-                tamanhoAtualfonte -= 10;
-                document.body.style.fontSize = `${tamanhoAtualfonte}%`;
+            if (tamanhoFonte > 90) {
+                tamanhoFonte -= 10;
+                document.body.style.fontSize = `${tamanhoFonte}%`;
             }
         });
     }
-
 });
