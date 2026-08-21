@@ -5,38 +5,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnAumentar = document.getElementById("btn-aumentar-texto");
     const btnDiminuir = document.getElementById("btn-diminuir-texto");
 
-    // aumenta a fonte
-
     let tamanhoAtualfonte = 100;
+    let altoContrasteAtivo = false;
 
-    //função alto contraste
-
+    //função alto contraste (aplica as cores diretamente no JS)
     btnContraste.addEventListener("click", () => {
-        
-        document.body.classList.toggle("alto-contraste");
+        altoContrasteAtivo = !altoContrasteAtivo;
 
-        //acessibilidade para leitores de tela 
+        if (altoContrasteAtivo) {
+            document.body.style.backgroundColor = "#000000";
+            document.body.style.color = "#FFFF00";
+        } else {
+            document.body.style.backgroundColor = "";
+            document.body.style.color = "";
+        }
 
-        const ativo = document.body.classList.contains("alto-contraste");
-        btnContraste.setAttribute("aria-pressed", ativo);
-
+        btnContraste.setAttribute("aria-pressed", altoContrasteAtivo);
     });
 
-    //função aumentar o texto
-
+    //função aumentar o texto (aplica o tamanho em todos os elementos)
     btnAumentar.addEventListener("click", () => {
         if (tamanhoAtualfonte < 150) {
             tamanhoAtualfonte += 10;
-            document.documentElement.style.fontSize = `${tamanhoAtualfonte}%`;
+            document.body.style.zoom = `${tamanhoAtualfonte}%`;
         }
     });
 
-    //função diminuir texto;
-
+    //função diminuir texto
     btnDiminuir.addEventListener("click", () => {
         if (tamanhoAtualfonte > 90) {
             tamanhoAtualfonte -= 10;
-            document.documentElement.style.fontSize = `${tamanhoAtualfonte}%`;
+            document.body.style.zoom = `${tamanhoAtualfonte}%`;
         }
     });
 
