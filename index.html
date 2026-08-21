@@ -14,9 +14,9 @@
         <h1>Como os Animais Enxergam as Cores e a Luz</h1>
         <p>Descubra como a evolução moldou a visão de diferentes espécies no planeta.</p>
 
-        <!-- BOTÕES DE ACESSIBILIDADE COM OS IDs CORRETOS -->
+        <!-- BARRA DE ACESSIBILIDADE -->
         <div class="acessibilidade">
-            <button id="btn-contraste">Alto Contraste</button>
+            <button id="btn-contraste" aria-pressed="false">Alto Contraste</button>
             <button id="btn-aumentar-texto">Aumentar Texto A+</button>
             <button id="btn-diminuir-texto">Diminuir Texto A-</button>
         </div>
@@ -28,7 +28,15 @@
             <h2>Introdução</h2>
             <p>A visão é um dos sentidos mais importantes para a sobrevivência dos animais. Ela permite encontrar
                 alimento, identificar predadores, localizar parceiros para a reprodução e orientar-se no ambiente. No
-                entanto, a maneira como os animais enxergam o mundo é muito diferente da visão humana.</p>
+                entanto, a maneira como os animais enxergam o mundo é muito diferente da visão humana. Isso ocorre
+                porque cada espécie evoluiu de acordo com seu habitat e suas necessidades, desenvolvendo características
+                visuais específicas.</p>
+            <p>Enquanto os seres humanos enxergam apenas uma pequena parte do espectro eletromagnético, alguns animais
+                conseguem perceber comprimentos de onda invisíveis para nós, como a luz ultravioleta (UV) e, em alguns
+                casos, a radiação infravermelha. Outros possuem excelente visão noturna, enquanto alguns distinguem
+                menos cores, mas detectam movimentos com muito mais eficiência. Essas diferenças são estudadas pela
+                Óptica e pela Biologia, permitindo compreender como a luz interage com os olhos e como o cérebro
+                interpreta as imagens.</p>
         </section>
 
         <section id="funcionamento">
@@ -43,33 +51,204 @@
                 <li><strong>Bastonetes:</strong> Permitem enxergar em locais escuros e são muito sensíveis à intensidade
                     da luz, mas não distinguem cores.</li>
             </ul>
+            <p>Os seres humanos possuem três tipos de cones, sensíveis às cores azul, verde e vermelha. A combinação dos
+                sinais enviados por esses cones permite perceber milhões de cores diferentes. Nos animais, entretanto, a
+                quantidade e o tipo de cones variam de acordo com a espécie.</p>
         </section>
 
         <section id="animais">
             <h2>Como os animais enxergam?</h2>
+            <p>Cada espécie possui um sistema visual adaptado ao ambiente em que vive. Essas adaptações são resultado de
+                milhões de anos de evolução.</p>
 
             <article>
                 <h3>Cães</h3>
                 <p>Os cães possuem visão bicromática, ou seja, apenas dois tipos de cones. Eles enxergam principalmente
-                    tons de azul e amarelo.</p>
+                    tons de azul e amarelo. As cores vermelha, laranja e verde são percebidas como tons semelhantes de
+                    amarelo ou marrom.</p>
+                <p>Embora não tenham uma visão colorida tão desenvolvida quanto a dos seres humanos, os cães conseguem
+                    detectar movimentos rapidamente e apresentam boa visão em ambientes com pouca iluminação, graças à
+                    maior quantidade de bastonetes.</p>
             </article>
 
             <article>
                 <h3>Gatos</h3>
-                <p>Os gatos possuem uma grande quantidade de bastonetes, permitindo excelente visão em locais escuros.
-                </p>
+                <p>Os gatos são animais de hábitos predominantemente noturnos. Seus olhos possuem uma grande quantidade
+                    de bastonetes, permitindo excelente visão em locais escuros.</p>
+                <p>Além disso, eles possuem uma estrutura chamada <em>tapetum lucidum</em>, localizada atrás da retina.
+                    Essa camada reflete a luz novamente para a retina, aumentando a quantidade de luz aproveitada e
+                    melhorando a visão noturna. É justamente essa estrutura que faz os olhos dos gatos brilharem quando
+                    iluminados à noite.</p>
+                <p>Os gatos enxergam menos cores que os humanos, mas compensam essa limitação com uma percepção
+                    extremamente eficiente dos movimentos.</p>
             </article>
 
             <article>
                 <h3>Aves</h3>
-                <p>Muitas espécies de aves conseguem enxergar a luz ultravioleta (UV), ajudando na localização de alimentos.</p>
+                <p>As aves possuem um dos sistemas visuais mais desenvolvidos do reino animal. Muitas espécies
+                    apresentam quatro tipos de cones, característica chamada visão tetracromática.</p>
+                <p>Além das cores visíveis para os seres humanos, elas conseguem enxergar a luz ultravioleta (UV). Essa
+                    capacidade auxilia na localização de alimentos, na escolha de parceiros reprodutivos, na
+                    identificação de penas saudáveis e na orientação durante o voo.</p>
+                <p>A visão das aves de rapina, como águias e falcões, é extremamente aguçada. Elas conseguem identificar
+                    pequenas presas a grandes distâncias, com uma acuidade visual muito superior à humana.</p>
             </article>
+
+            <article>
+                <h3>Abelhas</h3>
+                <p>As abelhas não enxergam a cor vermelha, porém conseguem perceber a luz ultravioleta.</p>
+                <p>Muitas flores apresentam padrões invisíveis aos olhos humanos, mas claramente visíveis para as
+                    abelhas. Esses desenhos funcionam como "pistas" que indicam onde está localizado o néctar,
+                    facilitando a polinização.</p>
+                <p>Essa adaptação beneficia tanto as abelhas quanto as plantas, tornando a polinização mais eficiente.
+                </p>
+            </article>
+
+            <article>
+                <h3>Cobras</h3>
+                <p>Algumas espécies de cobras, como as jararacas e cascavéis, possuem órgãos sensoriais especializados
+                    capazes de detectar a radiação infravermelha emitida pelos corpos aquecidos.</p>
+                <p>Embora isso não seja exatamente uma forma de visão, permite localizar presas mesmo em completa
+                    escuridão.</p>
+                <p>Essa adaptação é extremamente importante para espécies que caçam durante a noite.</p>
+            </article>
+
+            <article>
+                <h3>Camarão-louva-a-deus</h3>
+                <p>O camarão-louva-a-deus (mantis shrimp) possui um dos sistemas visuais mais complexos conhecidos.</p>
+                <p>Enquanto os seres humanos possuem três tipos de cones, esse animal pode apresentar até doze tipos de
+                    fotorreceptores, além de detectar luz ultravioleta e luz polarizada.</p>
+                <p>Os cientistas ainda estudam como seu cérebro processa essa enorme quantidade de informações visuais.
+                </p>
+            </article>
+
+            <article>
+                <h3>Cavalos</h3>
+                <p>Os cavalos possuem visão panorâmica devido à posição lateral dos olhos.</p>
+                <p>Eles conseguem observar quase todo o ambiente ao redor sem mover a cabeça, característica importante
+                    para identificar rapidamente a aproximação de predadores.</p>
+                <p>Sua visão colorida é semelhante à dos cães, distinguindo principalmente tons de azul e amarelo.</p>
+            </article>
+
+            <article>
+                <h3>Polvos</h3>
+                <p>Os polvos apresentam olhos altamente desenvolvidos, capazes de formar imagens muito nítidas.</p>
+                <p>Embora existam estudos indicando que possuam apenas um tipo principal de fotorreceptor, eles
+                    conseguem identificar diferenças entre ambientes e utilizar essa informação para realizar camuflagem
+                    extremamente eficiente.</p>
+                <p>Pesquisas ainda investigam como ocorre essa percepção visual.</p>
+            </article>
+        </section>
+
+        <section id="comparativo">
+            <h2>Comparação entre a visão humana e a visão animal</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Espécie</th>
+                        <th>Tipos de cones</th>
+                        <th>Características principais</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ser humano</td>
+                        <td>3</td>
+                        <td>Enxerga milhões de cores.</td>
+                    </tr>
+                    <tr>
+                        <td>Cão</td>
+                        <td>2</td>
+                        <td>Azul e amarelo; boa visão noturna.</td>
+                    </tr>
+                    <tr>
+                        <td>Gato</td>
+                        <td>2</td>
+                        <td>Excelente visão noturna e percepção de movimentos.</td>
+                    </tr>
+                    <tr>
+                        <td>Ave</td>
+                        <td>4</td>
+                        <td>Enxerga ultravioleta e possui alta acuidade visual.</td>
+                    </tr>
+                    <tr>
+                        <td>Abelha</td>
+                        <td>3 (incluindo UV)</td>
+                        <td>Detecta padrões ultravioleta nas flores.</td>
+                    </tr>
+                    <tr>
+                        <td>Camarão-louva-a-deus</td>
+                        <td>Até 12</td>
+                        <td>Detecta ultravioleta e luz polarizada.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="importancia-aplicacoes">
+            <h2>Importância das adaptações visuais</h2>
+            <p>As diferenças na visão dos animais representam adaptações evolutivas ao ambiente. Animais noturnos
+                desenvolveram maior quantidade de bastonetes para enxergar em locais escuros. Animais diurnos apresentam
+                maior número de cones, permitindo excelente percepção das cores. Predadores necessitam de alta precisão
+                para localizar presas, enquanto animais que podem ser caçados costumam possuir amplo campo de visão para
+                detectar ameaças rapidamente. Essas adaptações aumentam significativamente as chances de sobrevivência
+                de cada espécie.</p>
+
+            <h2>Aplicações para a ciência</h2>
+            <p>O estudo da visão dos animais tem contribuído para diversas áreas da ciência e da tecnologia.
+                Pesquisadores utilizam esses conhecimentos para desenvolver:</p>
+            <ul>
+                <li>Câmeras capazes de registrar luz ultravioleta;</li>
+                <li>Sensores para robôs e veículos autônomos;</li>
+                <li>Sistemas avançados de visão computacional;</li>
+                <li>Equipamentos médicos para diagnóstico ocular;</li>
+                <li>Tecnologias de imagens utilizadas em satélites e drones.</li>
+            </ul>
+            <p>A observação da natureza também inspira novas descobertas na Física, especialmente na área da Óptica.</p>
+        </section>
+
+        <section id="curiosidades">
+            <h2>Curiosidades</h2>
+            <ul>
+                <li>As águias enxergam detalhes aproximadamente quatro vezes melhores que os seres humanos.</li>
+                <li>Os gatos conseguem enxergar com cerca de seis vezes menos luz que uma pessoa.</li>
+                <li>As abelhas utilizam a luz ultravioleta para localizar flores.</li>
+                <li>Os cães não enxergam o mundo em preto e branco, como muitas pessoas acreditam.</li>
+                <li>O camarão-louva-a-deus possui um dos sistemas visuais mais complexos já descobertos.</li>
+                <li>Algumas cobras conseguem localizar presas apenas pelo calor que elas emitem.</li>
+            </ul>
+        </section>
+
+        <section id="conclusao">
+            <h2>Conclusão</h2>
+            <p>A visão dos animais é resultado de milhões de anos de evolução e adaptação aos diferentes ambientes da
+                Terra. Cada espécie desenvolveu características específicas para aumentar suas chances de sobrevivência,
+                seja enxergando melhor no escuro, distinguindo cores invisíveis aos seres humanos ou detectando calor e
+                movimentos com extrema precisão.</p>
+            <p>O estudo da óptica aplicada à visão animal demonstra que não existe uma única forma de enxergar o mundo.
+                Compreender essas diferenças permite conhecer melhor a biodiversidade e contribui para importantes
+                avanços científicos e tecnológicos, como o desenvolvimento de câmeras, sensores e sistemas de visão
+                artificial inspirados na natureza.</p>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2026 - Como os Animais Enxergam as Cores e a Luz</p>
+        <h2>Referências</h2>
+        <ul>
+            <li>CONWAY, B. R. et al. A Tour of Contemporary Color Vision Research. <em>Vision Research</em>, v. 151, p.
+                2–6, 2018.</li>
+            <li>NATIONAL GEOGRAPHIC BRASIL. Quais cores os cães enxergam: o que diz a ciência? Disponível em: <a
+                    href="https://www.nationalgeographicbrasil.com/animais/2022/12/quais-cores-os-caes-enxergam-o-que-diz-a-ciencia">https://www.nationalgeographicbrasil.com/animais/2022/12/quais-cores-os-caes-enxergam-o-que-diz-a-ciencia</a>.
+                Acesso em: 31 jul. 2026.</li>
+            <li>UNIVERSIDADE FEDERAL DO ABC (UFABC). Será que basta olhos para ver o arco-íris? Como os animais enxergam
+                cores? Disponível em: <a
+                    href="https://gec.proec.ufabc.edu.br/o-que-que-a-ciencia-tem/sera-que-basta-olhos-para-ver-o-arco-iris-como-os-animais-enxergam-cores/">https://gec.proec.ufabc.edu.br/o-que-que-a-ciencia-tem/sera-que-basta-olhos-para-ver-o-arco-iris-como-os-animais-enxergam-cores/</a>.
+                Acesso em: 31 jul. 2026.</li>
+            <li>PURVES, D. et al. <em>Neuroscience</em>. 6. ed. New York: Oxford University Press, 2018.</li>
+            <li>SCHWAB, I. R. <em>Evolution's Witness: How Eyes Evolved</em>. Oxford: Oxford University Press, 2012.
+            </li>
+        </ul>
     </footer>
 
     <script src="script.js"></script>
