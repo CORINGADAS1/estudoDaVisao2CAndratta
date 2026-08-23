@@ -1,3 +1,13 @@
+.img-animal {
+    width: 100%;
+    max-width: 500px;      /* Define uma largura máxima padrão */
+    height: 300px;         /* Mantém a mesma altura para todas */
+    object-fit: cover;     /* Ajusta e corta a imagem sem esticar */
+    border-radius: 8px;    /* Opcional: cantos arredondados */
+    display: block;
+    margin: 15px 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
